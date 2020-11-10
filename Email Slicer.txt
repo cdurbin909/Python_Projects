@@ -1,0 +1,29 @@
+"""
+Created on Nov 9, 2020
+
+Chase Durbin
+"""
+on = True
+while on:
+    email = input('Please enter an email: ')        # gets input and stores it in "email"
+
+    if '@' not in email:
+        print('please enter a valid email')
+    elif '.' not in email:
+        print('please enter a valid email')
+    elif '.com' not in email:
+        if '.gov' not in email:
+            if '.edu' not in email:
+                if '.net' not in email:
+                    if '.org' not in email:
+                        if '.shop' not in email:
+                            print('please enter a valid email. some formats are not available yet.')
+    # uses @ and . to determine if it is an email or not
+    else:
+        name, sep, domain = email.partition('@')
+        # uses name to store everything before @ symbol
+        # uses sep to store @ symbol
+        # uses domain to store everything after @ symbol
+
+        print('name: ' + name)
+        print('domain: ' + sep + domain)
